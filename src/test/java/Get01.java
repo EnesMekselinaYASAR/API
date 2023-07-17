@@ -30,7 +30,7 @@ public class Get01 {
 
     /**
      * ==>https://restful-booker.herokuapp.com==>baseUrl
-     * ==>/booking/101==>endPoint->bizi bir yere yönlrndiriyorsa endPoint
+     * ==>/booking/101==>endPoint->bizi bir yere yönlendiriyorsa endPoint
      * ==> /booking/101==>Aynı zamanda endPointte yer alan parametreler ayrı ayrı değerlendirildiğinde
      * ==>https://restful-booker.herokuapp.com/booking/101==>tamamına URL veya URI denir endPoint değil
      */
