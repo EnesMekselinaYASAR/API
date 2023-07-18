@@ -17,7 +17,7 @@ public class Get02b {
     And
          Server is "cloudflare"
     And
-         Respornse body should be empty
+         Response body should be empty
      */
 
     @Test
