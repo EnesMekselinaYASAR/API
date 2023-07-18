@@ -1,3 +1,9 @@
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+import org.junit.Test;
+
+import static io.restassured.RestAssured.given;
+
 public class Get02b {
     /*
     Given
@@ -13,6 +19,24 @@ public class Get02b {
     And
          Respornse body should be empty
      */
+
+    @Test
+    public void get02(){
+
+        // set the URL
+        String url= "https://reqres.in/api/users/23";
+        Response response = given().when().get(url);
+        response.prettyPrint();
+
+        // HTTP Status Code should be 404
+        response.
+                then().
+                statusCode(404).
+                statusLine("HTTP/1.1 404 Not Found").
+                header("Server","cloudflare");
+
+
+    }
 
 
 }
