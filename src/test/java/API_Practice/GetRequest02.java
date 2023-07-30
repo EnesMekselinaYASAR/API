@@ -33,7 +33,5 @@ public class GetRequest02 {
                 ,"data[0].first_name", Matchers.equalTo("George")
                 ,"data[0].last_name", Matchers.equalTo("Bluth"));
 
-
-
     }
 }
