@@ -2,9 +2,11 @@ package API_Practice;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import org.hamcrest.Matchers;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.*;
 
 public class GetRequest04 {
     /*
@@ -22,6 +24,10 @@ public class GetRequest04 {
         Response response = given().when().get(url);
 
         response.then().assertThat().contentType(ContentType.JSON).statusCode(200);
+        response.then().assertThat().body("data", hasSize(24),
+                "data.employee_name",hasItem("Ashton Cox"),
+                "data.employee_age",hasItems(21,61,23));
+
 
     }
 
