@@ -50,7 +50,5 @@ public class GetRequest01 {
                 .statusLine("HTTP/1.1 200 OK")
                 .contentType("application/json; charset=utf-8");
 
-
-
     }
 }
