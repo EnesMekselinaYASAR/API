@@ -27,10 +27,6 @@ public class GetRequest04 {
         response.then().assertThat().body("data", hasSize(24),
                 "data.employee_name",hasItem("Ashton Cox"),
                 "data.employee_age",hasItems(21,61,23));
-
-
     }
-
-
 
 }
