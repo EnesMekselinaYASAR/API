@@ -12,8 +12,7 @@ public class GetRequest05 {
         //bütün müşteri bilgilerine bu şekilde ulaşabiliyoruz
 
         String url ="https://www.gmibank.com/api/tp-customers";
-        String token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYXRjaDgxIiwiYXV0aCI6IlJPTEVfQURNSU4iLCJleHAiOjE2ODY5MTc4NDF9.x2OcBq7wrJyiIMmPv7HPYn5m-ai0rczw5nJH_imWABLxipYzTj10Qkx3H9_Upmo70odps_CWI80dqnQx1fmtcg";
-
+        String token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYXRjaDgxIiwiYXV0aCI6IlJPTEVfQURNSU4iLCJleHAiOjE2OTMzMzY3NzZ9.H865q0p_yhhDIJ7Mpl88uLDOU_6OEzhNiO4eNRLPofzdgmznkGlq0g4MVf1MfNaZgfWyJM-pRH6gqU-ONDBZGw";
         Response response = given().headers("Authorization","Bearer "+token).when().get(url);
         response.prettyPrint();
 
