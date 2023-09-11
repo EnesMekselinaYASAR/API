@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
+import static org.junit.Assert.assertEquals;
 
 public class Post02 extends RestfulBaseUrl {
      /*
@@ -58,6 +59,9 @@ public class Post02 extends RestfulBaseUrl {
 
         Map<String, Object> actualData = response.as(HashMap.class); //De-Serialization
         System.out.println(actualData);
+
+        assertEquals(expectedData.get("firstname"),  ((Map)actualData.get("booking")).get("firstname") );
+        assertEquals(expectedData.get("lastname"),  ((Map)actualData.get("booking")).get("lastname") );
 
     }
 
