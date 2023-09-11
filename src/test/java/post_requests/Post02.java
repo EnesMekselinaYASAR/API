@@ -6,6 +6,7 @@ import io.restassured.response.Response;
 import org.junit.Test;
 import test_data.RestfulTestData;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
@@ -54,6 +55,9 @@ public class Post02 extends RestfulBaseUrl {
 
         Response response = given().spec(spec).contentType(ContentType.JSON).body(expectedData).when().post("/{first}");
         response.prettyPrint();
+
+        Map<String, Object> actualData = response.as(HashMap.class); //De-Serialization
+        System.out.println(actualData);
 
     }
 
