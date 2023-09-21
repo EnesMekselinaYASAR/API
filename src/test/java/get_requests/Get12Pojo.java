@@ -2,6 +2,8 @@ package get_requests;
 
 import base_urls.RestfulBaseUrl;
 import org.junit.Test;
+import pojos.BookingDatesPojo;
+import pojos.BookingPojo;
 
 public class Get12Pojo extends RestfulBaseUrl {
 
@@ -33,6 +35,10 @@ public class Get12Pojo extends RestfulBaseUrl {
         spec.pathParams("first","booking","second",18);
 
         // set the expected data
+        BookingDatesPojo bookingDatesPojo = new BookingDatesPojo("2018-01-01","2019-01-01");
+        System.out.println(bookingDatesPojo.toString());
+        BookingPojo bookingPojo = new BookingPojo("Jane","Doe",111,true,bookingDatesPojo,"Extra pillows please");
+        System.out.println(bookingPojo);
 
 
     }
